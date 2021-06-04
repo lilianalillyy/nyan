@@ -1,0 +1,16 @@
+{
+  "name": "@nyan/nyan",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Mia <vottus@vott.us>",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "jest": "^27.0.4",
+    "rewire": "^5.0.0",
+    "ts-jest": "^27.0.2"
+  }
+}

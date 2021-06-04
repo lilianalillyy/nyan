@@ -1,0 +1,4 @@
+{
+  "ponicode.testSettings.testLocation.path": "{rootDir}/tests/{filePath}/{fileName}.test.{ext}",
+  "ponicode.testSettings.testLocation.locationType": "Custom"
+}

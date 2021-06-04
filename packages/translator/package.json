@@ -1,0 +1,11 @@
+{
+  "name": "@nyan/translator",
+  "version": "1.0.0",
+  "description": "Translator for the Nyan language.",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "author": "Mia <vottus@vott.us>",
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  }
+}
