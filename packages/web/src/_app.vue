@@ -43,22 +43,6 @@
                   "
                 >
                   <span class="block truncate">{{ mode.display }}</span>
-                  <span
-                    class="
-                      absolute
-                      inset-y-0
-                      right-0
-                      flex
-                      items-center
-                      pr-2
-                      pointer-events-none
-                    "
-                  >
-                    <SelectorIcon
-                      class="h-5 w-5 text-gray-400"
-                      aria-hidden="true"
-                    />
-                  </span>
                 </ListboxButton>
 
                 <transition
@@ -102,16 +86,6 @@
                           ]"
                         >
                           {{ m.display }}
-                        </span>
-
-                        <span
-                          v-if="selected"
-                          :class="[
-                            active ? 'text-white' : 'text-primary',
-                            'absolute inset-y-0 right-0 flex items-center pr-4 transition duration-200 ease-in-out',
-                          ]"
-                        >
-                          <CheckIcon class="h-5 w-5" aria-hidden="true" />
                         </span>
                       </li>
                     </ListboxOption>
@@ -202,7 +176,6 @@ import {
   ListboxOption,
   ListboxOptions,
 } from "@headlessui/vue";
-import { CheckIcon, SelectorIcon } from "heroicons-vue3/solid";
 // Compiling the TS manually.
 import Translator, { TranslationMode } from "@nyan/translator/src";
 
@@ -225,8 +198,6 @@ export default defineComponent({
     ListboxLabel,
     ListboxOption,
     ListboxOptions,
-    CheckIcon,
-    SelectorIcon,
   },
   setup() {
     const mode = ref<TranslationSelection>(modes[0]);

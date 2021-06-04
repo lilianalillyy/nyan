@@ -1823,11 +1823,6 @@ hash-sum@^2.0.0:
   resolved "https://registry.yarnpkg.com/hash-sum/-/hash-sum-2.0.0.tgz#81d01bb5de8ea4a214ad5d6ead1b523460b0b45a"
   integrity sha512-WdZTbAByD+pHfl/g9QSsBIIwy8IT+EsPiKDs0KNX+zSHhdDLFKdZu0BQHljvO+0QI/BasbMSUa8wYNCZTvhslg==
 
-heroicons-vue3@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/heroicons-vue3/-/heroicons-vue3-1.0.1.tgz#324bced2fa9e3bcc7abeab03ebc64f10a0e33ceb"
-  integrity sha512-oSHUq5Nm/ADuBR9c0stAjqsyV9mgsHMX+HUwCU0YsbFqgr/IEi9JyUvGYtJeXrnUyGiFeVPCZ7hTEjde8Y25NQ==
-
 html-encoding-sniffer@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/html-encoding-sniffer/-/html-encoding-sniffer-2.0.1.tgz#42a6dc4fd33f00281176e8b23759ca4e4fa185f3"
