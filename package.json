@@ -12,5 +12,8 @@
     "jest": "^27.0.4",
     "rewire": "^5.0.0",
     "ts-jest": "^27.0.2"
+  },
+  "scripts": {
+    "test": "jest tests"
   }
 }
