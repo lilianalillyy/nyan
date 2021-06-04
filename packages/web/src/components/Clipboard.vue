@@ -38,12 +38,55 @@ export default defineComponent({
       default: "",
     },
   },
-  setup() {
+  setup(props) {
     const alertVisible = ref(false);
+
+    const askForPermissions = async () => {
+      const { state } = await navigator.permissions.query({
+        name: "clipboard-write",
+      });
+
+      if (!["granted", "prompt"].includes(state)) {
+        throw new Error("No permissions to write.");
+      }
+    };
+
+    const legacyCopy = async (str: string) => {
+      try {
+        await askForPermissions();
+
+        const textArea = document.createElement("textarea");
+        textArea.value = str;
+        textArea.style.opacity = "0";
+
+        document.body.appendChild(textArea);
+
+        textArea.focus();
+        textArea.select();
+        document.execCommand("copy");
+
+        document.body.removeChild(textArea);
+      } catch (e) {
+        console.log(e);
+      }
+    };
+
+    const copy = async (str: string) => {
+      try {
+        await askForPermissions();
+        await navigator.clipboard.writeText(str);
+      } catch (e) {
+        console.log(e);
+      }
+    };
 
     const onClick = () => {
       console.log("click");
       alertVisible.value = true;
+
+      (navigator.clipboard.hasOwnProperty("writeText") ? copy : legacyCopy)(
+        props.text
+      );
 
       setTimeout(() => alertVisible.value && (alertVisible.value = false), 800);
     };
