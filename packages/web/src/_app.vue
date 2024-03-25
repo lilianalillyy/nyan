@@ -132,8 +132,6 @@
               transition
               duration-300
               ease-in-out
-              select-none
-              cursor-pointer
               break-all
             "
           >
